@@ -1,4 +1,5 @@
-'use client';
+"use client";
+import Link from "next/link";
 import React from "react";
 import { useSelector } from "react-redux";
 const Sidebar = () => {
@@ -7,7 +8,9 @@ const Sidebar = () => {
     isMenuOpen && (
       <div className="w-48 p-5 shadow-lg">
         <ul>
-          <li>Music</li>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
           <li>Sports</li>
           <li>Gaming</li>
           <li>Movies</li>

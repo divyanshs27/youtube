@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import Header from "./src/components/Header";
+import ClientReduxProvider from "./src/components/ClientReduxProvider";
+import Sidebar from "./src/components/Sidebar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,9 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      >
-        {children}
+      <body>
+        <ClientReduxProvider>
+          <Header />
+          <div className="flex">
+            <Sidebar />
+            {children}
+          </div>
+        </ClientReduxProvider>
       </body>
     </html>
   );

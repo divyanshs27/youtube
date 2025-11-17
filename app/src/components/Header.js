@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
@@ -21,7 +21,6 @@ const Header = () => {
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtvsQV0s-WIt9u_eoV-zLkOmLs_p1RO980CFuwxq7vGYOVtbP6X-rZWWjuBwxfWjTJBRo&usqp=CAU"
           alt="youtubeLogo"
           className="h-18"
-          
         ></img>
       </div>
       <div className="col-span-10 px-10">
