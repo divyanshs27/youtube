@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { YOUTUBE_VIDEOS_API } from "../utils/constants";
-import VideoCard from "./VideoCard";
+import VideoCard, { AdVideoCard } from "./VideoCard";
 import Link from "next/link";
 const VideoContainer = () => {
   const [videos, setVideos] = useState([]);
@@ -17,6 +17,7 @@ const VideoContainer = () => {
   if (!videos || videos.length === 0) return <div>Loading...</div>;
   return (
     <div className="flex flex-wrap">
+      <AdVideoCard info={videos[0]} />
       {videos.map((video) => (
         <Link href={"/watch?v=" + video.id} key={video.id}>
           <VideoCard info={video} />
